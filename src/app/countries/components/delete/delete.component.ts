@@ -19,7 +19,6 @@ export class DeleteComponent {
   @Output() newItemEvent = new EventEmitter();
 
   deleteCountry() {
-    console.log("this.deleteForm.value.id")
     this.countriesService.deleteCountry(this.deleteForm.value.id).subscribe(res => {
       if (res) {
         this.countriesService.getCountries().subscribe(res => {

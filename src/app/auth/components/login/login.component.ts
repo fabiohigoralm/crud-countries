@@ -18,7 +18,6 @@ export class LoginComponent {
   ) { }
 
   logIn() {
-    console.log('HAHAH')
     this.authService.logIn(this.loginForm.value);
     this.loginForm.reset();
   }
