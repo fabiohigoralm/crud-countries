@@ -1,4 +1,4 @@
-# CrudCoutries
+# Countries
 
 Este projeto é um aplicativo de exemplo de CRUD (Create, Read, Update, Delete) para gerenciar países. Foi desenvolvido usando Angular CLI com a versão 16.2.8.
 
