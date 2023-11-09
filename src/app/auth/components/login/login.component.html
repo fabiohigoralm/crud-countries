@@ -1,0 +1,41 @@
+<div class="page__login">
+  <div class="login">
+    <div class="login__wrapper">
+      <h1 class="login__title">CRUD PAÍSES</h1>
+      <p class="login__subtitle">Entre com sua conta</p>
+      <form
+        class="login__form"
+        [formGroup]="loginForm"
+        (ngSubmit)="logIn()"
+      >
+        <label class="login__label">
+          <p>Usuario</p>
+          <input
+            class="login__input"
+            type="text"
+            placeholder="Login"
+            formControlName="user"
+          />
+        </label>
+        <label class="login__label">
+          <p>Senha</p>
+          <input
+            class="login__input"
+            type="password"
+            placeholder="Senha"
+            formControlName="password"
+          />
+        </label>
+        <label class="login__label--button">
+          <button
+            class="login__button"
+            type="submit"
+            [disabled]="!loginForm.valid"
+          >
+            Entrar
+          </button>
+        </label>
+      </form>
+    </div>
+  </div>
+</div>

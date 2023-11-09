@@ -1,0 +1,55 @@
+.dashboard {
+  margin: 30px 10px;
+  border: 2px solid #4b5563;
+  border-radius: 15px;
+  background: #374151;
+}
+
+.dashboard__common {
+  border-radius: 15px 15px 0 0;
+  background-color: #1f2937;
+}
+
+.dashboard__title {
+  margin: 0;
+  padding: 15px 10px 10px 15px;
+}
+
+.dashboard__table {
+  padding: 10px;
+  width: 100%;
+  text-align: left;
+}
+
+.dashboard__table thead tr th {
+  background-color: #1f2937;
+  padding: 15px;
+}
+
+.dashboard__table tbody tr td {
+  padding: 10px 15px;
+}
+
+.dashboard__table tbody tr {
+  background-color: rgb(34, 34, 122);
+}
+
+.attention {
+  background-color: rgb(145, 176, 211) !important;
+}
+
+.edit__button {
+  border-radius: 5px;
+  margin: 0 5px;
+  padding: 3px 8px;
+  background: #374151;
+  border: 2px solid #4b5563;
+  color: #96a19d;
+}
+
+.edit__button:hover {
+  border: 2px solid #fff;
+  outline: none;
+  color: #fff;
+  background: #315fa0;
+}

@@ -1,0 +1,19 @@
+<form
+  class="delete__form"
+  [formGroup]="deleteForm"
+  (ngSubmit)="deleteCountry()"
+>
+  <input
+    class="delete__input"
+    type="text"
+    formControlName="id"
+    placeholder="Digite o Id do país"
+  />
+  <button
+    class="delete__button--submit"
+    type="submit"
+    [disabled]="!deleteForm.valid"
+  >
+    Remover país
+  </button>
+</form>

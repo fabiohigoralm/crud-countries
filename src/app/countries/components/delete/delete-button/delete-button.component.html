@@ -1,0 +1,16 @@
+<button (click)="openConfirm()" class="edit__button">Excluir</button>
+<div *ngIf="isConfirm" class="popup">
+  <div class="popup__wrapper">
+    <p class="popup__title">Deseja remover o país?</p>
+    <button class="add__button--submit" (click)="deleteConfirm()" type="button">
+      Confirmar
+    </button>
+    <button
+      (click)="closeConfirm()"
+      class="add__button--submit add__button--cancel"
+      type="button"
+    >
+      Cancelar
+    </button>
+  </div>
+</div>

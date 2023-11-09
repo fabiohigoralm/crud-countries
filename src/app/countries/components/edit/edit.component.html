@@ -1,0 +1,38 @@
+<form class="add__form" [formGroup]="editForm" (ngSubmit)="editCountry()">
+  <label>
+    <input
+      class="add__input"
+      type="text"
+      formControlName="addCountries"
+      placeholder="Digite o nome do pais"
+    />
+    <input
+      class="add__input"
+      type="text"
+      formControlName="addNationality"
+      placeholder="Digite a nacionalidade"
+    />
+    <input
+      class="add__input"
+      type="text"
+      formControlName="addSigla"
+      placeholder="Digite a Sigla"
+    />
+  </label>
+
+  <button
+    class="add__button--submit"
+    type="submit"
+    [disabled]="!editForm.valid"
+  >
+    Editar país
+  </button>
+</form>
+
+<button
+  class="add__button--submit add__button--cancel"
+  type="button"
+  (click)="cancelEdit()"
+>
+  Cancelar
+</button>

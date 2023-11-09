@@ -1,0 +1,64 @@
+<app-header></app-header>
+<div class="dashboard">
+  <div class="dashboard__common" *ngIf="!showEditPopup">
+    <p class="dashboard__title">Pesquisar</p>
+    <app-search (newItemEvent)="renderList($event)"></app-search>
+
+    <app-list (newItemEvent)="renderList($event)"></app-list>
+  </div>
+
+  <div *ngIf="isAdmin && !showEditPopup">
+    <div class="dashboard__admin">
+      <p class="dashboard__title">Adicionar e Remover</p>
+      <app-add (newItemEvent)="renderList($event)"></app-add>
+      <p class="dashboard__title">Excluir pelo Id</p>
+      <app-delete
+        [id]="idEdit"
+        (newItemEvent)="renderList($event)"
+      ></app-delete>
+    </div>
+  </div>
+
+  <div *ngIf="showEditPopup">
+    <p class="dashboard__title">Editar país</p>
+
+    <app-edit
+      [id]="idEdit"
+      [list]="items"
+      (newItemEvent)="renderList($event)"
+      (closeEditPopup)="closeEditPopup()"
+    ></app-edit>
+  </div>
+
+  <table class="dashboard__table">
+    <thead>
+      <tr>
+        <th>Id</th>
+        <th>Nome</th>
+        <th>Sigla</th>
+        <th>Gentilico</th>
+        <th *ngIf="isAdmin && !showEditPopup">Ações</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr
+        *ngFor="let item of items"
+        [ngClass]="item.id === idEdit ? 'attention' : ''"
+      >
+        <td>{{ item.id }}</td>
+        <td>{{ item.nome }}</td>
+        <td>{{ item.sigla }}</td>
+        <td>{{ item.gentilico }}</td>
+        <td *ngIf="isAdmin && !showEditPopup">
+          <button (click)="openEditPopup(item.id)" class="edit__button">
+            Editar
+          </button>
+          <app-delete-button
+            (newItemEvent)="renderList($event)"
+            [id]="item.id"
+          ></app-delete-button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>

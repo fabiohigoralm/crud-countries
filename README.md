@@ -1,27 +1,34 @@
 # CrudCoutries
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 16.2.8.
+Este projeto é um aplicativo de exemplo de CRUD (Create, Read, Update, Delete) para gerenciar países. Foi desenvolvido usando Angular CLI com a versão 16.2.8.
 
-## Development server
+## Pré-requisitos
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+Certifique-se de ter o Node.js e o npm instalados em seu sistema.
 
-## Code scaffolding
+## Instalação
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+1. Clone o repositório:
 
-## Build
+2. Navegue para o diretório do projeto:
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+3. Instale as dependências:
 
-## Running unit tests
+## Execução
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+1. Inicie o servidor de desenvolvimento:
 
-## Running end-to-end tests
+2. Abra o navegador e acesse `http://localhost:4200/`. O aplicativo será carregado automaticamente.
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+3. Para a aplicação funcionar corretamente 
 
-## Further help
+## Tecnologias utilizadas
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+- Angular 16.2.0
+- TypeScript 5.1.3
+- RxJS 7.8.0
+- Zone.js 0.13.0
+
+## Licença
+
+Este projeto está licenciado sob a [MIT License](LICENSE).
